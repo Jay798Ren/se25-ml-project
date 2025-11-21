@@ -1,0 +1,69 @@
+# AI Agent Model Selection Report
+
+## Testing Method
+Manually tested three lightweight LLM models' responses to the same question
+
+## Test Question
+"What is the capital of France?"
+
+## Test Results
+
+### gemma3:1b (1B parameters)
+- **Response Status**: Successful
+- **Response Time**: ~2 seconds
+- **Response Content**:
+  ```
+  The capital of France is **Paris**.
+
+  It's a common misconception that Paris is the *only* capital, but it's the most widely recognized and historically significant.
+  ```
+- **Quality Assessment**: Good
+
+### gemma3:4b (4B parameters)
+- **Response Status**: Successful
+- **Response Time**: ~2 seconds
+- **Response Content**:
+  ```
+  The capital of France is **Paris**.
+
+  It's a global center for art, fashion, gastronomy, and culture. 😊
+
+  Do you want to know anything more about Paris?
+  ```
+- **Quality Assessment**: Excellent
+
+### qwen3-vl:4b (4B parameters, multimodal)
+- **Response Status**: Successful
+- **Response Time**: ~30 seconds
+- **Response Content**: (Detailed historical and administrative background analysis)
+- **Quality Assessment**: Excellent
+
+## Selected Model
+**gemma3:4b**
+
+## Selection Justification
+
+### 1. Best Performance
+- Among the three models, gemma3:4b provides the most friendly response while maintaining fast response times
+- The answers are both accurate and interactive, demonstrating good user experience design
+
+### 2. Response Speed Advantage
+- Response time of only 2 seconds, comparable to the smallest gemma3:1b
+- Significant speed advantage compared to qwen3-vl:4b's 30-second response
+
+### 3. Excellent Answer Quality
+- Accurately answered the core question "The capital of France is Paris"
+- Provided valuable background information (art, fashion, gastronomy, cultural center)
+- Features friendly interactivity (emojis and follow-up questions)
+
+### 4. Balanced Resource Efficiency
+- 4B parameters strike a good balance between capability and efficiency
+- More capable than 1B models while having more reasonable resource requirements than larger models
+
+### 5. Wide Applicability
+- Fast response suitable for real-time AI Agent applications
+- Friendly interaction style suitable for various application scenarios
+- Balanced performance suitable as a general-purpose AI Agent core
+
+## Conclusion
+Based on manual testing results, **gemma3:4b** is recommended as the core model for AI Agent. This model performs excellently in response speed, answer quality, and resource efficiency, providing fast, accurate, and friendly interaction experience for AI Agent applications.
